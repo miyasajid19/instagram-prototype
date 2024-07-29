@@ -454,8 +454,7 @@ def myposts(data):
         love=Button(contentframe,image=img,bg="wheat",border=0)
         love.grid(row=r,column=1)
         love.image=img
-        likebutton = Button(contentframe, text=f"Likes: {i[-2]}", font=("Monotype Corsiva", 16, "bold"),border=0,activebackground="#000",  bg="#000", fg="white",command=None,wraplength=500)
-
+        likebutton = Button(contentframe, text=f"Liked by : {i[-2]}", font=("Monotype Corsiva", 16, "bold"),border=0,activebackground="#000",  bg="#000", fg="white",command=None,wraplength=500)
         likebutton.grid(row=r, column=0)
         likebutton.config(fg="red")
         love.config(bg="red",fg="blue")
@@ -463,6 +462,7 @@ def myposts(data):
         conn,cursor=connection()
 
         cursor.execute("select `comments` from `posts` where `imageid`=?",(i[1],))
+        r+=1
         allcomments=list(cursor.fetchone())
         try:
             allcomments=allcomments[0].split(',') 
@@ -874,7 +874,6 @@ def home(data):
             love.config(bg="red",fg="blue")
         else:
             pass
-        Button(contentframe, text="share").grid(row=r, column=2)
         r+=1
         conn,cursor=connection()
         cursor.execute("select `comments` from `posts` where `imageid`=?",(i[1],))
