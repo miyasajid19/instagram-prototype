@@ -194,6 +194,9 @@ We welcome contributions to improve this project! Here’s how you can contribut
 We will review your pull request and provide feedback. Once approved, your changes will be merged into the main repository.
 
 Thank you for contributing!
+
+
+
 ##interfaces
 
 ![Screenshot 2024-07-29 012649](https://github.com/user-attachments/assets/a0160575-51ae-4bde-9cec-333efaa27898)
